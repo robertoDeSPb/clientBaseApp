@@ -1,0 +1,3 @@
+D:/c++/Projects/ClientBaseApp/out/build/x64-Debug/CMakeFiles/ClientBaseApp.dir
+D:/c++/Projects/ClientBaseApp/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/c++/Projects/ClientBaseApp/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
