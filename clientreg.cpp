@@ -9,14 +9,14 @@ clientReg::clientReg(QWidget *parent) :
 
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("./testDB.sqlite");
-    if(db.open())
-    {
-        qDebug("open");
-    }
-    else
-    {
-        qDebug("no open");
-    }
+//    if(db.open())
+//    {
+//        qDebug("open");
+//    }
+//    else
+//    {
+//        qDebug("no open");
+//    }
     query = new QSqlQuery(db);
     query->exec("CREATE TABLE `ClientBook` (Firstname TEXT, Lastname TEXT, Patronymic TEXT, Age INT);");
     query->exec();
