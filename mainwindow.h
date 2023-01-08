@@ -21,6 +21,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_sumButton_clicked();
+
+    void on_profileButton_clicked();
+
+    void on_visitsButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 

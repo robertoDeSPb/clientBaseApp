@@ -7,6 +7,8 @@ clientReg::clientReg(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
+
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("./testDB.sqlite");
 //    if(db.open())
@@ -27,6 +29,7 @@ clientReg::clientReg(QWidget *parent) :
     model->select();
 
     ui->tableView->setModel(model);
+
 }
 
 clientReg::~clientReg()
