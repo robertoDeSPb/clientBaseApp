@@ -7,6 +7,9 @@
 #include <QDebug>
 #include <QSqlQuery>
 #include <QSqlTableModel>
+#include "clientreg.h"
+#include "mytablemodel.h"
+#include "clientdata.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -28,10 +31,15 @@ private slots:
 
     void on_visitsButton_clicked();
 
+    void on_curGuests_clicked();
+
 private:
     Ui::MainWindow *ui;
 
     QSqlDatabase db;
     QSqlQuery *query;
+
+public:
+    clientReg clientRegPage;
 };
 #endif // MAINWINDOW_H

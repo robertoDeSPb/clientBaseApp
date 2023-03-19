@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
     //ui->centralwidget->setWindowTitle("Registrate");
     MainWindow::setWindowTitle("Registrate");
     ui->label_2->setPixmap(QPixmap("D:/c++/Projects/ClientBaseApp/images/user.png"));
@@ -28,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
         QString name = q.value(0).toString();
         QString lastname = q.value(1).toString();
         QString patronymic = q.value(2).toString();
+        int age = q.value(4).toInt();
         name += " " + lastname + " " + patronymic;
         ui->label_fio->setText(name);
         ui->label_age->setText("Возраст: " + QString(q.value(3).toString()));
@@ -58,5 +60,20 @@ void MainWindow::on_profileButton_clicked()
 void MainWindow::on_visitsButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
+}
+
+
+void MainWindow::on_curGuests_clicked()
+{
+    clientRegPage.SendToServer(0,true);
+    //send code to send personal data(FIO of guests) back to client
+
+    //myTableModel *myModel = new myTableModel();
+    //auto clients = clientRegPage->returnGuests();
+    qDebug() << "number = " << clientRegPage.number;
+
+    //myModel->setGuests(clientRegPage.returnGuests());
+
+    //ui->tableView->setModel(&clientRegPage.guestsTab);
 }
 
